@@ -1,0 +1,68 @@
+
+{% load static %}
+<div class="container-fluid">
+    <div class="row " style="height: auto;line-height: 30px;">
+        <div class="col-lg-6">
+            {% for emailphone in email_phone %}
+            <a target="_blank" style="color:#308014;" href="mailto:{{emailphone.email}}"><i class="fas fa-envelope"></i>&nbsp;&nbsp;{{emailphone.email}}</a>&nbsp;&nbsp;&nbsp;
+            <a style="color: #308014;" href="tel:+91{{emailphone.phone}}"><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;+91{{emailphone.phone}}</a>
+            {% endfor %}
+        </div>
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-2">
+            <a href="https://www.instagram.com/prayashekkadam/" target="_blank"><i class="fab fa-instagram fa-1x" style="line-height:30px;"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/Prayashekkadam/" target="_blank"><i class="fab fa-twitter fa-1x" style="line-height:30px;"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://facebook.com/careerstimuluscharitabletrust/" target="_blank"><i class="fab fa-facebook-f fa-1x" style="line-height:30px;"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- NAVBAR BEGINS -->
+<nav class="navbar navbar-expand-lg navbar-light " style="background-image: linear-gradient(#00CD66, #008B45);border-bottom:5px solid #00cd00">
+    <a class="navbar-brand" href="{% url 'charity:home' %}" style="color:#fff;"><img src="{% static 'images/logo/career.png' %}" height="40px">CAREER  &nbsp;STIMULUS  &nbsp;CHARITABLE  &nbsp;TRUST</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="{% url 'charity:gallery' %}" style="color:#fff;">Our Gallery</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'charity:home' %}" style="color:#fff;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'charity:aboutus' %}" style="color:#fff;">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'charity:contactus' %}" style="color:#fff;">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://edu.careerstimulus.co.in/" style="color:#fff;">Our Works</a>
+            </li>
+            
+            <li class="nav-item active">
+                <a href="{% url 'charity:donateview' %}" class="btn btn-danger ">
+                    Donate Now &nbsp;<i class="fas fa-hand-holding-usd"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- NAVBAR ENDS -->
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+{% extends 'charity/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'charity/includes/message.html' %}
+	<div class="container pt-4 pb-4 mt-4">
+		<div class="row">
+		{% for a in contact %}
+			<div class="col-lg-6">
+				<p>{{a.body|safe}}</p>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+{% endblock %}

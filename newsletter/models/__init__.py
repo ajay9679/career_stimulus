@@ -1,0 +1,1 @@
+from newsletter.models.newsletter_user import NewsletterUser

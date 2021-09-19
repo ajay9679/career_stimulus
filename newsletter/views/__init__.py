@@ -1,0 +1,1 @@
+from newsletter.views.newsletter_user import newsletter_form
