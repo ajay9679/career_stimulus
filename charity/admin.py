@@ -1,5 +1,5 @@
 from django.contrib import admin
-from charity.models import CharitableProjects, User, EmailPhone, Aboutus, ProjectsImages, Contactus
+from charity.models import CharitableProjects, User, EmailPhone, Aboutus, ProjectsImages, Contactus, writeToUsModel
 from django.utils.html import format_html
 from instamojo_wrapper import Instamojo
 from career_stimulus.settings import PAYMENT_API_KEY, PAYMENT_API_AUTH_KEY
@@ -18,7 +18,7 @@ class CharitableProjectsAdmin(admin.ModelAdmin):
 	list_editable = ('active',)
 	raw_id_fields = ('author',)
 	prepopulated_fields = {'slug': ('title',)}
-	list_per_page = 2
+	list_per_page = 10
 	inlines = [ProjectsImageModel]
 
 	# def get_body(self, obj):
@@ -59,5 +59,8 @@ class AboutUsAdmin(admin.ModelAdmin):
 class ContactUsAdmin(admin.ModelAdmin):
 	list_display = ['created']
 
+@admin.register(writeToUsModel)
+class writeToUsModel(admin.ModelAdmin):
+	list_display = ['name', 'email', 'phone', 'subject' , 'created']
 
 

@@ -25,7 +25,7 @@ SECRET_KEY = 'juz3rw^1x3ulu8#tzfznd7*y4_8vxhf1x_0g^u=3gmlf&(s*#5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.prayashekkadam.org', 'prayashekkadam.org']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -86,9 +86,9 @@ WSGI_APPLICATION = 'career_stimulus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rmfbitux_careerstimulus',
-        'USER': 'rmfbitux_sujit',
-        'PASSWORD': 'sujit20singh',
+        'NAME': 'career_stimulus',
+        'USER': 'root',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -132,8 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/rmfbitux/public_html/static'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = '/home/rmfbitux/public_html/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

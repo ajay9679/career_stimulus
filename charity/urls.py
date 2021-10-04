@@ -5,7 +5,7 @@ from charity.views import index
 from charity.views import gallery
 from charity.views import aboutus
 from charity.views import contactus
-from charity.views import RegisterView, detailview, donate
+from charity.views import RegisterView, detailview, donate, WriteWithUsView
 
 app_name = 'charity'
 
@@ -19,4 +19,5 @@ urlpatterns = [
     path('donate/', donate.donateview, name='donateview'),
     path('complete-payment/', donate.verifypayment, name='verifypaymentview'),
     path('register/', RegisterView.as_view(), name='register'),
+    path('write-with-us/', WriteWithUsView, name='write-with-us'),
 ]
