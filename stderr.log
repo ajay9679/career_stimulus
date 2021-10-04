@@ -4159,3 +4159,340 @@ Not Found: /static/charity/webfonts/fa-solid-900.ttf
 Not Found: /static/charity/webfonts/fa-brands-400.ttf
 Not Found: /favicon.ico
 Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 234, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/__init__.py", line 130, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rmfbitux/career_stimulus/charity/views/index.py", line 11, in index
+    recent_image = CharitableProjects.objects.filter(active=True).select_related('author').order_by('-created')[0]
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 317, in __getitem__
+    qs._fetch_all()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1173, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 234, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/__init__.py", line 130, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 234, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/__init__.py", line 130, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1045, "Access denied for user 'rmfbitux_sujit'@'localhost' (using password: YES)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rmfbitux/career_stimulus/charity/views/index.py", line 11, in index
+    recent_image = CharitableProjects.objects.filter(active=True).select_related('author').order_by('-created')[0]
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 317, in __getitem__
+    qs._fetch_all()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1173, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 234, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/__init__.py", line 130, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (1045, "Access denied for user 'rmfbitux_sujit'@'localhost' (using password: YES)")
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 234, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/__init__.py", line 130, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1045, "Access denied for user 'rmfbitux_sujit'@'localhost' (using password: YES)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rmfbitux/career_stimulus/charity/views/index.py", line 11, in index
+    recent_image = CharitableProjects.objects.filter(active=True).select_related('author').order_by('-created')[0]
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 317, in __getitem__
+    qs._fetch_all()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1173, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 234, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/__init__.py", line 130, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (1045, "Access denied for user 'rmfbitux_sujit'@'localhost' (using password: YES)")
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'rmfbitux_prayashekkadam.charity_charitableprojects' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rmfbitux/career_stimulus/charity/views/index.py", line 11, in index
+    recent_image = CharitableProjects.objects.filter(active=True).select_related('author').order_by('-created')[0]
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 317, in __getitem__
+    qs._fetch_all()
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'rmfbitux_prayashekkadam.charity_charitableprojects' doesn't exist")
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rmfbitux/career_stimulus/charity/views/index.py", line 11, in index
+    recent_image = CharitableProjects.objects.filter(active=True).select_related('author').order_by('-created')[0]
+  File "/home/rmfbitux/virtualenv/career_stimulus/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 318, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+Not Found: /favicon.ico
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /favicon.ico
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /robots.txt
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
+Not Found: /static/charity/webfonts/fa-solid-900.woff2
+Not Found: /static/charity/webfonts/fa-brands-400.woff2
+Not Found: /static/charity/webfonts/fa-solid-900.woff
+Not Found: /static/charity/webfonts/fa-brands-400.woff
+Not Found: /static/charity/webfonts/fa-solid-900.ttf
+Not Found: /static/charity/webfonts/fa-brands-400.ttf
