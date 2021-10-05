@@ -86,9 +86,9 @@ WSGI_APPLICATION = 'career_stimulus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rmfbitux_prayashekkadam',
-        'USER': 'rmfbitux_sujitsingh',
-        'PASSWORD': 'prayashekkadam',
+        'NAME': 'career_stimulus',
+        'USER': 'root',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }
