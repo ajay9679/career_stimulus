@@ -7,13 +7,16 @@
 {% include 'charity/includes/message.html' %}
 	<div class="container pt-4 pb-4 mt-4">
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-lg-10">
 				<h2 style="color:#3A5FCD">{{charity_detail.title|title}}</h2>
 				<div>
 					{% load thumbnail %}
-					<img class="img-rounded img-responsive" src="{% if charity_detail.image %}{% thumbnail charity_detail.image 250x0 %}{% else %}{% static 'images/no_image.png' %}{% endif %}">
+					<!--<img class="img-rounded img-responsive" src="{% if charity_detail.image %}{% thumbnail charity_detail.image 250x0 %}{% else %}{% static 'images/no_image.png' %}{% endif %}" style="width: 100%;height: 100%">-->
+					<img src="{{ charity_detail.image.url }}" style="width: 100%;height: 100%"/>
 				</div>
-				<p>{{charity_detail.body|safe|linebreaks}}</p>
+				<div style="word-spacing: 12px; font-size: 16px;">
+				    <p>{{charity_detail.body|safe|linebreaks}}</p>
+				</div>
 				<hr>
 				<!-- <i class="fas fa-share-alt fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="http://www.facebook.com/sharer/sharer.php?u=http://localhost:8000{{ request.get_full_path|urlencode }}" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>&nbsp;&nbsp; -->

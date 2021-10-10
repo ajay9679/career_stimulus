@@ -35,7 +35,7 @@ def donateview(request):
 		# Create a new Payment Request
 		response = API.payment_request_create(
     		amount=amount,
-    		purpose='Testing Purpose',
+    		purpose='Payment to C.S. Charitable Trust',
     		send_email=True,
     		email=email,
     		redirect_url="http://localhost:8000/complete-payment"
